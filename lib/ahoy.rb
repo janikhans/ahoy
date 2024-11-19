@@ -150,9 +150,9 @@ module Ahoy
   end
 end
 
-ActiveSupport.on_load(:action_controller) do
-  include Ahoy::Controller
-end
+# ActiveSupport.on_load(:action_controller) do
+#   include Ahoy::Controller
+# end
 
 ActiveSupport.on_load(:active_record) do
   extend Ahoy::Model
