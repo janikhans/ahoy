@@ -19,6 +19,9 @@ module Ahoy
     def authenticate(data)
     end
 
+    def collect(data)
+    end
+
     def visit
     end
 

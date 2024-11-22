@@ -90,6 +90,17 @@ module Ahoy
       report_exception(e)
     end
 
+    def collect(params = {})
+      if exclude?
+        debug "Collect excluded"
+      else
+        @store.collect(params)
+      end
+      true
+    rescue => e
+      report_exception(e)
+    end
+
     def visit
       @visit ||= @store.visit
     end

@@ -1,5 +1,7 @@
 module Ahoy
   class BaseController < ApplicationController
+    include Ahoy::Controller
+
     filters = _process_action_callbacks.map(&:filter) - Ahoy.preserve_callbacks
     skip_before_action(*filters, raise: false)
     skip_after_action(*filters, raise: false)

@@ -51,6 +51,9 @@ module Ahoy
       end
     end
 
+    def collect(data)
+    end
+
     def visit
       unless defined?(@visit)
         if ahoy.send(:existing_visit_token) || ahoy.instance_variable_get(:@visit_token)
